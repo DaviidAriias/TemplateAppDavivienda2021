@@ -1,0 +1,61 @@
+.kangarooLite{
+    display: inline-block;
+    border-radius: 6px 6px 0 0;
+    width: 98%;
+    max-width: 550px;
+    background-color: $gris-c9;
+    height: 75px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    box-shadow: 1px -3px 5px $gris-a7;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    font-size: 0;
+    box-sizing: border-box;
+
+    transition-duration: .2s;
+    strong, span{
+        display: inline-block;
+        width: 100%;
+        color: $negro-57;
+        font-size: $font-p - 2;
+    }
+    
+    span{
+        margin-bottom: 3px;
+    }
+
+    strong{
+        font-weight: bold;
+        color: $negro-57;
+        font-size: $font-p + 6;
+    }
+
+    .column{
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        position: relative;
+        &:last-of-type{
+            width: calc(48% - 15px);
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 100%;
+    
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: - 10px;
+                background-color: lighten(#000000, 60%);
+                border-radius: 6px;
+            }
+        }
+    }
+}

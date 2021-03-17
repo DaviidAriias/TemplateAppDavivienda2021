@@ -1,0 +1,39 @@
+.listItemsB{
+    display: inline-block;
+    width: 100%;
+    ul{
+        display: inline-block;
+        width: 100%;
+        li{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative;
+            
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            span.icon-dv-listItemA{
+                font-size: $font-p - 4;
+                float: left;
+                top: 5px;
+                position: relative;
+            }
+
+            span.icon-dv-listItemB{
+                font-size: $font-p - 7;
+                float: left;
+                top: 5px;
+                position: relative;
+            }
+
+            p{
+                display: inline;
+                padding-left: 5px;
+                @include defaultFont();
+            }
+        }
+    }
+}

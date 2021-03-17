@@ -1,0 +1,15 @@
+//Containers - Importante en todo los flujos - Contenedor principal
+.container {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    position: relative;
+
+    //Fluid Atencion en Línea / Support
+    &--fluid{
+        padding-bottom: 110px;
+    }
+}

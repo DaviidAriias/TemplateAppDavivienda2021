@@ -1,0 +1,23 @@
+/*---------------------------------------------------
+
+============ Main - SASS ============
+* Nombre del proyecto: Styles V2020
+* Nombre del archivo: styles.scss | styles.css
+* Descripción: Hoja de estilos principal App Davivienda 2020
+* Autor: Movilidad y Canales Banco Davivienda
+
+---------------------------------------------------*/
+
+
+//-------- Base SCSS
+@import 'base/_base';    
+
+
+//-------- Modules Compiled SCSS
+@import 'modules/_modules'; 
+
+
+//-------- Main Layout SCSS
+@import 'layout/_layout';
+
+

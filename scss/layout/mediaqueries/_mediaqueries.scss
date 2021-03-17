@@ -1,0 +1,155 @@
+//----------- Mobile
+@media (min-width: 45em) {
+
+}
+
+//----------- Phablet
+@media (min-width: 50em) {
+    body{
+        background-color: #fff;
+    }
+
+    //Desktop titles
+    .titlesHeader--Desktop{
+        display: block;
+    }
+    
+    //Mobile button back
+    .backButton{
+        display: none;
+    }
+
+    //Buttons container & buttons
+    .contButtons{
+        .button{
+            &.button--back{
+                display: inline-block;
+            }
+        }  
+    }
+
+    //contentBox responsive shadow and background
+    .contentBox{
+        padding: 0;
+        background-color: transparent;
+        @include prefix((
+            box-shadow: none
+        ), webkit moz ms);
+
+        &--typeB{
+            padding: 15px;
+            background-color: $background-contextBox;
+            @include prefix((
+                box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+            ), webkit moz ms);
+        }
+
+    }
+    
+    //Select & input icon position
+    select{
+        background-position: 98% 50% !important;
+    }
+    //Inputs fluid dirección
+    .input--fluidBigger{
+        select{
+            background-position: 95% 50% !important;
+        }
+    }
+    input{
+        background-position: 98.5% 50% !important;
+    }
+
+    //Fluid input padding
+    .input--fluid, .input--fluidBigger{
+        input{
+            padding: 6px;
+        }
+    }
+
+    //Results alert
+    .resultAlert{
+        &__main{
+            padding: 15px 5%;
+        }
+        &__infoExtra{
+            p{
+                padding: 0 5%;
+            }
+        }
+    }
+}
+
+//----------- Tablet
+@media (min-width: 64em) {
+
+}
+
+//----------- laptop
+@media (min-width: 70em) {
+
+}
+
+//----------- PC
+@media (min-width: 91em) {
+
+}
+
+
+// ------------------------------------------------------------------ Mediaqueries specific iPhones
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3){
+    
+}
+
+//Mediqueries extra
+@media only screen and (max-width: 440px){
+    .contButtons{
+        &--sameWidth{
+            .button{
+                width: 48%;
+                margin: 0 2.5px;
+                font-size: 3.7vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .contModal{
+        .modal{
+            .contButtons{
+                .button{
+                    width: 45%;
+                    font-size: 5.5vw;
+                }
+            }
+        }
+    }
+}

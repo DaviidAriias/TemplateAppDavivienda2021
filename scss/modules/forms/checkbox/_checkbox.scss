@@ -1,0 +1,95 @@
+//Checkboxes
+.checkbox{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    @include defaultFont();
+    
+    strong, a {
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+    a.buttonTooltip{
+        text-decoration: none !important;
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+        display: none;
+        &:checked~.checkbox__indicator {
+            &::after {
+                opacity: 9;
+            }
+        }
+    }
+
+    .checkbox__indicator {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 21px;
+        width: 21px;
+        background: transparent;
+        
+        @include prefix((
+            border: 1px solid lighten($text-color, 70%),
+            appearance: none
+        ), webkit moz ms o);
+
+        background-color: #fff;
+        border-radius: 6px;
+
+        transition-duration: .2s;
+        &:hover{
+            border: 1px solid lighten($text-color, 30%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+
+            width: 15px;
+            height: 15px;
+            background-color: $red-primary;
+            border-radius: 4px;
+
+            box-sizing: unset;
+            opacity: 0;
+            transition-duration: .2s;
+        }
+
+        &--tick{
+            &::before{
+                content: "";
+
+                display: inline-block;
+                width: 10px;
+                height: 7px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-image: url(../media/_defaultIcons/icon-chekboxTick.svg);
+                background-position: center;
+                background-size: cover;
+                z-index: 1;
+                transform: translateX(-.5px);
+            }
+        }
+        
+    }
+}

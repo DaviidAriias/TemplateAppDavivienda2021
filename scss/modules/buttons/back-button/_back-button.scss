@@ -1,0 +1,19 @@
+//Boton regresar - Mobile
+.backButton {
+    @include prefix((
+        display: flex,
+        align-items: center,
+        justify-content: flex-start,
+    ), webkit moz ms);
+    
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    @include defaultFont();
+    
+    span{
+        font-size: $font-p + 10;
+        margin-right: 5px;
+    }
+}

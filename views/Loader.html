@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../media/_defaultIcons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Davivienda S.A.</title>
+</head>
+
+<body>
+    <!-- #region Main Container -->
+    <section class="container" style="min-height: 100vh;">
+
+        <!-- ¡Importante!
+            Tener en cuenta que los estilos quemados dentro del HTML son a manera de ejemplo,
+            para posicionar el botón en el mismo, pero lo importante, es el comportamiento y la animación
+            del Loader.
+        -->
+
+        <!-- #region buttons-main -->
+            <div class="contButtons" style=" height: 38px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin:  auto;">
+                <button type="button" class="button--primary" onclick="showModalStudy()">Estudio</button>
+            </div>
+        <!-- #endregion buttons-main -->
+
+    </section>
+    <!-- #endregion Main section -->
+
+    <!-- #region Evaluación solicitud -->
+    <section class="contStudyProcess" id="StudyProcess">
+        <div class="loaderAnimation">
+            <div class="loader"></div>
+        </div>
+    </section>
+    <!-- #endregion Evaluación solicitud -->
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

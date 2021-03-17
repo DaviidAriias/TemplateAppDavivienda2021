@@ -1,0 +1,37 @@
+.benefitsContainer{
+    display: inline-block;
+    width: 100%;
+
+    ul{
+        display: inline-block;
+        width: 100%;
+
+        li.benefits__item{
+            @include prefix((
+                display: flex,
+                align-items: center,
+                justify-content: flex-start
+            ), webkit mox ms o);
+
+            width: 100%;
+            margin: 30px 0;
+    
+            &:first-of-type, 
+            &:last-of-type{
+                margin: 0 0;
+            }
+    
+            img{
+                display: inline-block;
+                width: 100%;
+                max-width: 25px;
+            }
+    
+            p{
+                @include defaultFont();
+                padding-left: 15px;
+            }
+        }
+        
+    }
+}

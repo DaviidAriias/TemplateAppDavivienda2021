@@ -1,0 +1,86 @@
+//Confirmaciones y resultados
+.resultConfir {
+    display: inline-block;
+    width: 100%;
+
+    &__item {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        color: $text-color;
+        background-color: $gris-ed;
+        margin: 2.5px 0;
+        padding: 13px 15px;
+        border-radius: 5px;
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        .title, .item {
+            display: inline-block;
+            width: 100%;
+            @include defaultFont();
+            margin-bottom: 0;
+
+            &.title{
+                font-weight: bold;
+            }
+
+            strong{
+                &.underline{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        //Items disabled
+        &--disabled{
+            @extend .resultConfir__item;
+            opacity: 50%;
+        }
+
+        //Items with tooltip
+        &--padTooltip{
+            @extend .resultConfir__item;
+            padding-right: 40px;
+        }
+
+        //Items with small text
+        &--small{
+            @extend .resultConfir__item;
+            .title, .item{
+                display: inline;
+                font-size: $font-p - 2;
+                text-align: justify;
+                a{
+                    font-size: $font-p - 2;
+                }
+                strong{
+                    font-size: $font-p - 2;
+                }
+            }
+        }
+
+        //Hidden - Oculto
+        &--hidden{
+            display: none;
+            .resultConfir__item{
+                margin-top: 2.5px;
+            }
+        }
+
+        &--isShow{
+            display: block;
+        }
+
+        &:hover{
+            background-color: darken($gris-ed, 5%);
+        }
+
+    }
+}

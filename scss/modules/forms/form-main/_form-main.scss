@@ -1,0 +1,70 @@
+//Formularios
+form {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    
+    //Container Iputs - !Importante!
+    .input{
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        &--switch{
+            @include prefix((
+                display: flex,
+                align-items: center,
+                justify-content: space-between,
+                align-content: center
+            ), webkit moz ms o);
+
+            label, .label{
+                width: calc(100% - 50px);
+            }
+            .switch{
+                width: 38px;
+            }
+        }
+
+        //Spans
+        .helper{
+            display: inline-block;
+            width: 100%;
+            margin-top: 5px;
+
+            @include defaultFont($fz: 12px);
+            &--validation{
+                font-weight: bold;
+            }
+        }
+    }
+
+    //Multicheckbox Vinculación
+    .multiChecbox{
+        display: inline-block;
+        font-size: 0;
+        box-sizing: border-box;
+        text-align: left;
+        .checkbox{
+            display: inline-block;
+            margin-top: 10px;
+            box-sizing: border-box;
+            width: calc(90%/5);
+            min-width: 105px;
+            padding-top: 4px;
+            margin-right: 4%;
+            &:last-of-type{
+                width: auto;
+            }
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){
+                margin-top: 0;
+            }
+        }
+    }
+
+}

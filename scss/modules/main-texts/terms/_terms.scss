@@ -1,0 +1,15 @@
+//Terminos y Condiciones
+.container{
+    &--textTYC{
+        h2{
+            text-align: center;
+            font-size: $font-p + 3;
+        }
+        p{
+            @include defaultFont($ta: justify);
+            &.sublist{
+                padding-left: 15px;
+            }
+        }
+    }
+}

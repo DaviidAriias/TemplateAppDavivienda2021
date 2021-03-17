@@ -1,0 +1,140 @@
+//Container y Botones genericos
+.contButtons{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 15px auto 0;
+    
+    //Setear botones para que tengan el mismo ancho, ¡No usar siempre, tener cuidado!
+    &--sameWidth{
+        font-size: 0;
+        box-sizing: border-box;
+        .button{
+            width: 46%;
+            margin: 0 5px;
+        }
+    }
+}
+
+//Botones genericos
+.button{
+    display: inline-block;
+    width: 45%;
+    min-width: 110px;
+    max-width: 200px;
+    margin: 0 5px;
+    padding: 9px 15px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: $disabled-object;
+
+    @include defaultFont($fz: 18px, $fw: bold, $c: #fff, $ta: center);
+
+
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: inherit;
+
+    
+    /*&:first-of-type{
+        margin-left: 0;
+    }
+    &:last-of-type{
+        margin-right: 0;
+    }*/
+
+    &:hover{
+        background-color: darken($disabled-object, 10%);
+    }
+
+    &--back{
+        @extend .button;
+        display: none;
+    }
+
+    &--secondary{
+        @extend .button;
+        &:hover{
+            background-color: darken($disabled-object, 10%);
+        }
+    }
+
+    &--primary{
+        @extend .button;
+        background-color: $red-primary;
+        &:hover{
+            background-color: darken($red-primary, 10%);
+        }
+    }    
+
+    &:disabled{
+        //pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+
+
+//TENER EN CUENTA
+/*
+%buton2{
+    display: inline-block;
+    width: 45%;
+    min-width: 110px;
+    max-width: 200px;
+    margin: 0 5px;
+    padding: 9px 15px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: $disabled-object;
+
+    @include defaultFont($fz: 18px, $fw: bold, $c: #fff, $ta: center);
+
+
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: inherit;
+
+    
+    &:first-of-type{
+        margin-left: 0;
+    }
+    &:last-of-type{
+        margin-right: 0;
+    }
+
+    &:hover{
+        background-color: darken($disabled-object, 10%);
+    }
+}
+
+//Botones genericos
+.button{
+
+    &--back{
+        @extend %buton2;
+        display: none;
+    }
+
+    &--secondary{
+        @extend %buton2;
+        &:hover{
+            background-color: darken($disabled-object, 10%);
+        }
+    }
+
+    &--primary{
+        @extend %buton2;
+        background-color: $red-primary;
+        &:hover{
+            background-color: darken($red-primary, 10%);
+        }
+    }    
+
+    &:disabled{
+        //pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+*/

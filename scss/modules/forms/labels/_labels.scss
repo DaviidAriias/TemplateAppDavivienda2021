@@ -1,0 +1,9 @@
+//Labels Inputs - Dejar por fuera para evitar complicaciones con otros labels como Radiobuttons o Checkbox
+label, .label{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+
+    @include defaultFont();
+}

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../media/_defaultIcons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Davivienda S.A.</title>
+</head>
+
+<body>
+    <!-- #region Main Container -->
+    <section class="container container--fluid">
+
+        <!-- #region Desktop title -->
+        <div class="titlesHeader--Desktop">
+            <h1>Cuenta Móvil Pensión</h1>
+            <h3>Apertura</h3>
+        </div>
+        <!-- #endregion Desktop title -->
+
+        <!-- #region back button -->
+        <a href="javascript:void(0)" class="backButton backButton--alter">
+            <span class="icon-dv-btnBack"></span>
+            Volver
+        </a>
+        <!-- #endregion back button -->
+
+        <!-- #region Tracking A -->
+        <div class="trackingMain mt-20px">
+            <div class="trackingMain__dataNav">
+                    <!-- No se necesita poner números en el tracking, van automaticos por CSS -->
+                <a href="javascript:void(0)" class="dataNav__step dataNav__step--complete"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+            </div>
+        </div>
+        <!-- #endregion Tracking A -->
+
+        <!-- #region Tracking B -->
+        <div class="trackingAlter">
+            <div class="trackingAlter__dataNav">
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+                <a href="javascript:void(0)" class="dataNav__step dataNav__step--active"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+                <a href="javascript:void(0)" class="dataNav__step"></a>
+            </div>
+        </div>
+        <!-- #endregion Tracking B -->
+
+        <!-- #region buttons-main -->
+            <!-- Borrar este título -->
+            <h2 class="mV-0px fz-18px mxw-100pc">Botones primarios</h2>
+            <div class="contButtons">
+                <button type="button" class="button--primary mb-20px" onclick="showModal(1)">Modal A</button>
+                <button type="button" class="button--primary" onclick="showModal(2)">Modal B</button>
+                <button type="button" class="button--primary" onclick="showLoaderShops()">Comercios</button>
+                <button type="button" class="button--primary" onclick="showModalStudy()">Estudio</button>
+                <button type="button" class="button--primary" onclick="showKangaroo(1)">Canguro</button>
+            </div>
+
+            <!-- Borrar este título -->
+            <h2 class="mt-20px fz-18px mxw-100pc">Botones secundarios</h2>
+            <div class="contButtons">
+                <button type="button" class="button--secondary button--back">Regresar</button>
+                <button type="button" class="button--secondary" disabled>Deshabilitado</button>
+            </div>
+
+            <!-- Borrar este título -->
+            <h2 class="mt-20px fz-18px mxw-100pc">Botones anchos iguales</h2>
+            <div class="contButtons contButtons--sameWidth">
+                <button type="button" class="button--secondary">Necesito un asesor</button>
+                <button type="button" class="button--primary">Aceptar</button>
+            </div>
+        <!-- #endregion buttons-main -->
+        
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Contenedor beneficios y características</h2>
+
+        <!-- #region  Box container -->
+        <div class="contentBox--typeB">
+
+            <!-- #region Benefits container -->
+            <div class="benefitsContainer">
+                <ul>
+
+                    <!-- Item Beneficios y Caracteristicas -->
+                    <li class="benefits__item">
+                        <img src="../media/extraIcons/icon-ByC-1.svg" alt="Benefit icon">
+                        <p>
+                            Ipsum dolor sit amet consectetur adipisicing elit. Impedit, id perferendis blanditiis qui porro deserunt!
+                        </p>
+                    </li>
+                    <!-- Fin Item Beneficios y Caracteristicas -->
+
+                    <!-- Item Beneficios y Caracteristicas -->
+                    <li class="benefits__item">
+                        <img src="../media/extraIcons/icon-ByC-1.svg" alt="Benefit icon">
+                        <p>
+                            Sit amet consectetur adipisicing elit. Iure suscipit in omnis velit odio, minima nihil molestiae vel quisquam ab, lorem ipsum dolor.
+                        </p>
+                    </li>
+                    <!-- Fin Item Beneficios y Caracteristicas -->
+
+                    <!-- Item Beneficios y Caracteristicas -->
+                    <li class="benefits__item">
+                        <img src="../media/extraIcons/icon-ByC-1.svg" alt="Benefit icon">
+                        <p>
+                            Consectetur adipisicing elit. Distinctio velit facilis, accusantium repellendus tempora non ea corrupti quis, ipsum dolor sit amet.
+                        </p>
+                    </li>
+                    <!-- Fin Item Beneficios y Caracteristicas -->
+
+                </ul>
+            </div>
+            <!-- #endregion Benefits container -->
+
+        </div>
+        <!-- #endregion Box container -->
+
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Formulario</h2>
+
+        <div class="contentBox--typeB">
+            <form>
+                <!-- Campo ingreso de texto -->
+                <div class="input">
+                    <label for="campo-texto">Campo ingreso texto</label>
+                    <input type="text" id="campo-texto" value="">
+                </div>
+
+                <!-- Campo ingreso de texto opcional -->
+                <div class="input">
+                    <label for="campo-texto-opcional">Campo ingreso texto opcional</label>
+                    <input type="text" id="campo-texto-opcional" value="" placeholder="Opcional">
+                </div>
+                
+                <!-- Campo ingreso de texto editable -->
+                <div class="input">
+                    <label for="campo-texto-editable">Campo ingreso texto editable</label>
+                    <input type="text" id="campo-texto-editable" value="Input value editable" disabled="">
+                    <a href="javascript:void(0)" title="Editar" class="input__buttonAction"><span class="icon-dv-edit"></span></a>
+                </div>
+
+                <!-- Campo ingreso númerico -->
+                <div class="input">
+                    <label for="campo-numero">Campo ingreso númerico</label>
+                    <input type="number" id="campo-numero" value="">
+                </div>
+
+                <!-- Campo ingreso moneterio -->
+                <div class="input">
+                    <label for="campo-money">Campo ingreso monetario</label>
+                    <input type="tel" id="campo-money" class="currency" autocomplete="off" onblur="currencyMask()">
+                </div>
+
+                <!-- Campo error -->
+                <div class="input">
+                    <label for="campo-error">Campo error</label>
+                    <input type="text" class="input--alert" id="campo-error" value="$154.000">
+                    <span class="helper helper--validation">
+                        El monto a abonar es superior al saldo disponible.
+                    </span>
+                </div>
+
+                <!-- Campo selección de fecha -->
+                <div class="input">
+                    <label for="fecha">Campo selección de fecha</label>
+                    <input type="date" id="fecha" onchange="changePlaceholder()">
+                </div>
+                
+                <!-- Campo selección editable -->
+                <div class="input">
+                    <label for="fecha-editable">Campo selección de fecha editable</label>
+                    <input type="date" id="fecha-editable" class="editable" value="2020-08-20" disabled="">
+                    <a href="javascript:void(0)" title="Editar" class="input__buttonAction" onclick="hideBgIcon()"><span class="icon-dv-edit"></span></a>
+                </div>
+
+                <!-- Dropdown cuentas -->
+                <div class="input">
+                    <label for="accounts">Dropdown cuentas</label>
+                    <select name="accounts" class="notChange" id="accounts" onchange="colorDropdown()">
+                        <option value="-1" selected="" disabled="">Seleccione una opción</option>
+                        <option value="1">Cta. Ahorros **** 2140</option>
+                        <option value="2">Cta. de otro bancos</option>
+                    </select>
+                    
+                    <div class="notchBalance notchBalance--hidden">
+                        <label class="title">Saldo disponible:</label>
+                        <label class="balance">$2.360.000</label>
+                    </div>
+                </div>
+
+                <!-- Dropdown -->
+                <div class="input">
+                    <label for="dropdown">Dropdown</label>
+                    <select name="accounts" id="dropdown" class="notChange" onchange="colorDropdown()">
+                        <option value="-1" selected="" disabled="">Seleccione una opción</option>
+                        <option value="1">Opción 1</option>
+                        <option value="2">Opción 2</option>
+                    </select>
+                </div>
+
+                <!-- Campo OTP -->
+                <div class="input">
+                    <label for="OTP">OTP</label>
+                    <div class="input">
+                        <input type="number" id="OTP" class="otp" onkeypress="return limitNumbers(event)" oninput="limitLength(this)" onfocus="focusIn()" onblur="focusOut()" maxlength="8" min="1" max="99999999">
+                        <a href="javascript:void(0)" class="buttonTooltip"><span class="icon-dv-tooltipAsk"></span></a>
+                        <div class="tooltip">
+                            <p>
+                                El celular al que le enviamos este código, es el mismo que actualmente utilizamos para enviarle la información de los movimientos de sus cuentas y productos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo tooltip label -->
+                <div class="input">
+                    <label for="input-tooltip-label"> 
+                        Campo con tooltip en el label
+                        <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                        <div class="tooltip">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, blanditiis.
+                            </p>
+                        </div>
+                    </label>
+                    <input type="text" id="input-tooltip-label" value="">
+                </div>
+
+                <!-- Campo tooltip dentro del campo -->
+                <div class="input">
+                    <label for="input-tooltipInside">Campo con tooltip dentro</label>
+                    <div class="input">
+                        <input type="text" id="input-tooltipInside">
+                        <a href="javascript:void(0)" class="buttonTooltip"><span class="icon-dv-tooltipAsk"></span></a>
+                        <div class="tooltip">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, blanditiis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo número de teléfono -->
+                <div class="input input--noPadding">
+                    <label for="phone"> Número de teléfono </label>
+                    <div class="input--fluid">
+                        <span>+57</span>
+                        <input type="number" id="phone" placeholder="Indicativo">
+                        <input type="number" placeholder="Número">
+                        <input type="number" placeholder="Ext.">
+                    </div>
+                </div>
+
+                <!-- Campo dirección -->
+                <div class="input">
+                    <label for="">Campo dirección</label>
+                    <div class="input--fluidBigger">
+                        <select name="addresInit" class="notChange" onchange="colorDropdown()">
+                            <option value="-1" selected="" disabled="">Seleccione</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                        <input type="text" value="">
+                        <span>#</span>
+                        <input type="text" value="">
+                        <span>-</span>
+                        <input type="text" value="">
+                    </div>
+                </div>
+
+                <!-- Campo dirección editable -->
+                <div class="input">
+                    <label for="adressDefault">Campo dirección editable</label>
+                    <input type="text" id="adressDefault" value="Carrera 9 # 116 - 08" disabled="">
+                    <a href="javascript:void(0)" title="Editar" class="input__buttonAction" onclick="changeAddress()"><span class="icon-dv-edit"></span></a>
+
+                    <div class="input--fluidBigger" style="display: none;">
+                        <select name="addresInit" class="notChange" onchange="colorDropdown()">
+                            <option value="-1" selected="" disabled="">Seleccione</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                        <input type="text" value="">
+                        <span>#</span>
+                        <input type="text" value="">
+                        <span>-</span>
+                        <input type="text" value="">
+                    </div>
+
+                    <div class="input" id="editData" style="display: none;">
+                        <label for="otros-datos">Torre / Piso / Apartamento / Otro:</label>
+                        <input type="text" id="otros-datos" value="">
+                    </div>
+
+                    <div class="input" id="editCity" style="display: none;">
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" value="">
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="input">
+                    <label class="checkbox">
+                        Acepto las autorizaciones <a href="javascript:void(0)">aquí</a> descritas con relación a la consulta y reporte de mi información.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator"></div>
+                    </label>
+                </div>
+
+                <!-- Radio Buttons -->
+                <div class="input">
+                    <p class="label mt-0px">Radio buttons</p>
+                    <label class="radio">
+                        Si
+                        <input type="radio" value="" name="dir-principal"> 
+                        <div class="radio__indicator"></div>
+                    </label>
+                    <label class="radio">
+                        No
+                        <input type="radio" value="" name="dir-principal">
+                        <div class="radio__indicator"></div>
+                    </label>
+                </div>
+                
+                <!-- Ranger slider -->
+                <div class="input input--range">
+                    <label>Ranger slider general</label>
+                    <div class="input--range__container">
+                        <div id="bubble" class="bubble">
+                            <p> <span class="bubbleValue"></span> </p>
+                        </div>
+                        <div class="helper helper--minmax">
+                            <p class="min"></p>
+                            <p class="max"></p>
+                        </div>
+                        <input class="range range--initial0" type="range" min="1" max="10" value="1" oninput="rangeSlider(this)">
+                        <div class="helper helper--type">
+                            <p>Minímo</p>
+                            <p>Máximo</p>
+                        </div>
+                    </div>
+                </div>  
+
+                <!-- Ranger slider valores monetarios -->
+                <div class="input input--range input--range--monetary">
+                    <label>Ranger slider monetario</label>
+                    <div class="input--range__container">
+                        <div id="bubble" class="bubble">
+                            <p> <span class="bubbleValue"></span> </p>
+                        </div>
+                        <div class="helper helper--minmax">
+                            <p class="min"></p>
+                            <p class="max"></p>
+                        </div>
+                        <input class="range range--initial0" type="range" min="1" max="30" value="15" oninput="rangeSlider(this)">
+                        <div class="helper helper--type">
+                            <p>Millón</p>
+                            <p>Millones</p>
+                        </div>
+                    </div>
+                </div>
+
+           </form>
+        </div>
+
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Toggle switch multiple</h2>
+        <div class="contentBox--typeB">
+            <form action="" style="width: 49%;">
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+            </form>
+            
+            <form action="" style="width: 49%;">
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+            </form>
+
+            <form action="" class="mt-15px">
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Toggle switch single</h2>
+        <div class="contentBox--typeB">
+            <form action="" style="width: 49%;">
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_radio" checked>
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_radio">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_radio">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+            </form>
+
+            <form action="" style="width: 49%;">
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_single" checked>
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_single">
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="switch">
+                        <input type="radio" name="switch_single">
+                        <span class="switch__thumb"></span>
+                        <span class="thumb_text"></span>
+                    </label>
+                </div>
+            </form>
+
+            <form action="" class="mt-15px">
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="radio" name="switch_single" checked>
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="radio" name="switch_single">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+                <div class="input input--switch">
+                    <p class="label">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, quod.
+                    </p>
+                    <label class="switch">
+                        <input type="radio" name="switch_single">
+                        <span class="switch__thumb"></span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+                
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Radio cards A</h2>
+        <div class="contentBox--typeB">
+            <form>
+                <div class="input">
+                    <label class="radio radio--radioCard">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                        <div class="radioCard__background"></div>
+                    </label>
+
+                    <div class="radioCard__extraInfo">
+                        <div class="listItemsB">
+                            <ul>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>Item list radio cards - Tooltip</p>
+                                    <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                                    <div class="tooltip tooltip--fullWidth">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, inventore?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards - No tooltip, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <label class="radio radio--radioCard">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                        <div class="radioCard__background"></div>
+                    </label>
+
+                    <div class="radioCard__extraInfo">
+                        <div class="listItemsB">
+                            <ul>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>Item list radio cards - Tooltip</p>
+                                    <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                                    <div class="tooltip tooltip--fullWidth">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ipsum?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards - No tooltip, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Radio cards A - Toggle </h2>
+        <div class="contentBox--typeB">
+            <form>
+                <div class="input">
+                    <label class="radio radio--radioCard radio--radioCardToggle">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                        <div class="radioCard__background"></div>
+                        <a href="javascript:void(0)" class="radioCard__toggle"> <span class="icon-dv-arrowDownBG"></span><span>Ver más</span></a>
+                    </label>
+
+
+                    <div class="radioCard__extraInfo radioCard__extraInfo--hidden">
+                        <div class="listItemsB">
+                            <ul>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>Item list radio cards - Tooltip</p>
+                                    <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                                    <div class="tooltip tooltip--fullWidth tooltip--top">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, inventore?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <label class="radio radio--radioCard radio--radioCardToggle">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                        <div class="radioCard__background"></div>
+                        <a href="javascript:void(0)" class="radioCard__toggle"> <span class="icon-dv-arrowDownBG"></span><span>Ver más</span></a>
+                    </label>
+                    
+
+                    <div class="radioCard__extraInfo radioCard__extraInfo--hidden">
+                        <div class="listItemsB">
+                            <ul>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>Item list radio cards - Tooltip</p>
+                                    <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                                    <div class="tooltip tooltip--fullWidth tooltip--top">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, inventore?
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                                <li>
+                                    <span class="icon-dv-listItemB"></span>
+                                    <p>
+                                        Item list radio cards - No tooltip, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Radio cards B</h2>
+        <div class="contentBox--typeB">
+            <form>
+                <div class="input">
+                    <label class="radio radio--radioCard radio--radioCardB">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__background"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input">
+                    <label class="radio radio--radioCard radio--radioCardB">
+                        <input type="radio" value="" name="radio-card"> 
+                        <div class="radio__indicator"></div>
+                        <div class="radioCard__background"></div>
+                        <div class="radioCard__info">
+                            <p>
+                                Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Quam praesentium molestiae
+                                sequi impedit, doloremque consequuntur natus culpa, autem quos ipsa expedita, aliquam
+                                veniam illo iusto.
+                            </p>
+                        </div>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Confirmación</h2>
+        <div class="contentBox--typeB">
+            <h2 class="mb-15px ta-center">Verifique las condiciones de su solicitud</h2>
+            <div class="resultConfir">
+                
+                <div class="resultConfir__item">
+                    <label class="title">Título confirmación habilitado:</label>
+                    <label class="item">Texto item confirmación</label>
+                </div>
+                <div class="resultConfir__item--disabled">
+                    <label class="title">Título confirmación inhabilitado:</label>
+                    <label class="item">Texto item confirmación</label>
+                </div>
+                <div class="resultConfir__item--small">
+                    <label class="item">Texto de confirmación en donde se pueden encontrar textos como este, <strong class="underline">tipo strong y underline</strong> o textos como estos, <strong>tipo simplemente en strong</strong>, cabe resaltar que estos textos serían de 12px.</label>
+                </div>
+
+                <a href="javascript:void(0)" class="toggleButton">
+                    <span class="resultConfirButton--more">Más detalles</span>
+                    <span class="resultConfirButton--icon icon-dv-showMore"></span>
+                </a>
+
+                <div class="resultConfir__item--hidden">
+                    <div class="resultConfir__item">
+                        <label class="title">Título confirmación habilitado:</label>
+                        <label class="item">Texto item que se encuentra oculto</label>
+                    </div>
+                </div>
+
+            </div>  
+        </div>
+
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Autorizaciones</h2>
+        <div class="contentBox--typeB">
+            <h2 class="ta-center mb-15px">Marque las siguientes opciones para continuar con el proceso</h2>
+            <form>
+                <div class="input">
+                    <label class="checkbox">
+                        Deseo que esta cuenta quede exenta del 4 x 1000 (GMF) <a href="javascript:void(0)">Conozca las condiciones</a>. (Opcional)
+                        <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                        <input type="checkbox">
+                        <div class="checkbox__indicator"></div>
+                        <div class="tooltip">
+                            <p>
+                                El gravamen a los Movimientos Financieros (GMF)  es un impuesto indirecto de orden nacional que se aplica en las transacciones financieras realizadas por los usuarios del sistema.
+                            </p>
+                        </div>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="checkbox">
+                        Declaro que el objetivo de esta cuenta no está encaminado a manejar recursos de campañas o partidos políticos.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator"></div>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="checkbox">
+                        Acepto que conozco y estoy de acuerdo con el <a href="javascript:void(0)">contrato de los productos</a> que estoy adquiriendo.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator"></div>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="checkbox">
+                        Autorizo a Davivienda para <a href="javascript:void(0)">debitar automáticamente</a> de mi cuenta móvil el pago de los productos que estoy adquiriendo.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator"></div>
+                    </label>
+                </div> 
+                <div class="input">
+                    <label class="checkbox">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi neque nisi suscipit. Libero deserunt ducimus rerum.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator checkbox__indicator--tick"></div>
+                    </label>
+                </div> 
+                <div class="input">
+                    <label class="checkbox">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi neque nisi suscipit. Libero deserunt ducimus rerum.
+                        <input type="checkbox">
+                        <div class="checkbox__indicator checkbox__indicator--tick"></div>
+                    </label>
+                </div> 
+            </form>
+        </div>
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Resultados</h2>
+        <div class="contentBox--typeB contentBox--result">
+
+            <div class="resultHeader">
+                <label class="resultHeader__credit">Crédito Apartamento ***6452</label>
+            </div>
+
+            <!-- Resultado satisfactorio -->
+            <div class="resultAlert">
+                <div class="resultAlert__main--center">
+                    <span class="icon-dv-resultCheck icon"></span>
+                    <p>
+                        <strong class="title">Felicitaciones</strong>
+                        Su crédito móvil ha sido desembolsado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resultado no satisfactorio -->
+            <div class="resultAlert">
+                <div class="resultAlert__main--center">
+                    <span class="icon-dv-resultFail icon"></span>
+                    <p>
+                        <strong class="title">Transacción erronea</strong>
+                        Su crédito móvil no ha sido desembolsado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resultado no satisfactorio -->
+            <div class="resultAlert">
+                <div class="resultAlert__main--center">
+                    <span class="icon-dv-resultAlert icon"></span>
+                    <p>
+                        <strong class="title">Transacción en proceso</strong>
+                        Su crédito móvil se enceuntra en proceso de desembolso.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resultado con extra info abajo -->
+            <div class="resultAlert">
+                <div class="resultAlert__main--center">
+                    <span class="icon-dv-resultCheck icon"></span>
+                    <p>
+                        <strong class="title">Felicitaciones</strong>
+                        Su crédito móvil ha sido desembolsado.
+                    </p>
+                </div>
+                <div class="resultAlert__infoExtra">
+                    <p>
+                        Lorem ipsum dolor sit, amet <strong>consectetur adipisicing</strong> elit. Nulla consectetur libero rem sit.
+                    </p>
+                </div>
+            </div>
+
+            <div class="resultConfir">
+
+                <div class="resultConfir__item">
+                    <label class="title">Título confirmación habilitado:</label>
+                    <label class="item">Texto item confirmación</label>
+                </div>
+                <div class="resultConfir__item--disabled">
+                    <label class="title">Título confirmación inhabilitado:</label>
+                    <label class="item">Texto item confirmación</label>
+                </div>
+                <div class="resultConfir__item--small">
+                    <label class="item">Texto de confirmación en donde se pueden encontrar textos como este, <strong class="underline">tipo strong y underline</strong> o textos como estos, <strong>tipo simplemente en strong</strong>, cabe resaltar que estos textos serían de 12px.</label>
+                </div>
+
+                <a href="javascript:void(0)" class="toggleButton">
+                    <span class="resultConfirButton--more">Más detalles</span>
+                    <span class="resultConfirButton--icon icon-dv-showMore"></span>
+                </a>
+
+                <div class="resultConfir__item--hidden">
+                    <div class="resultConfir__item">
+                        <label class="title">Título confirmación habilitado:</label>
+                        <label class="item">Texto item que se encuentra oculto</label>
+                    </div>
+                </div>
+                
+            </div>  
+        </div>
+
+        <!-- Borrar este título -->
+        <h2 class="mt-20px fz-18px mxw-100pc">Términos y condiciones</h2>
+        <div class="contentBox--typeB">
+
+            <div class="container container--textTYC">
+                <h2 class="mb-15px tt-uppercase"> General </h2>
+                <p>
+                    Dolor sit amet consectetur <strong>adipisicing elit</strong>. Maiores sed deserunt libero non delectus,
+                    corrupti cum voluptas, ipsam modi quibusdam quasi architecto voluptate omnis facere qui illo
+                    officiis fugit molestias.
+                    <br><br>
+                    Sit amet consectetur, adipisicing elit. Totam, odit? Magni quidem facere
+                    cupiditate asperiores quo in veritatis, accusantium recusandae, eum nihil iusto beatae nulla
+                    distinctio odit, reiciendis <strong>consectetur libero exercitationem</strong> fugit eveniet. Maxime consequuntur
+                    culpa ipsam distinctio, doloremque maiores debitis iure. Minima illo tenetur blanditiis itaque
+                    dignissimos et eos!
+                    <br>
+                    Ipsum dolor sit amet consectetur adipisicing elit. Ex autem ratione nostrum error iure
+                    assumenda, suscipit ipsa debitis, <strong>officiis dolorem eveniet</strong>, id expedita dolore ipsum sunt blanditiis
+                    sapiente pariatur nesciunt! Similique numquam fugit debitis minima explicabo aut et corrupti.
+                    Dignissimos, assumenda? Veritatis placeat repudiandae nesciunt in id nisi sunt veniam incidunt
+                    alias. Quas aut laboriosam vitae voluptate eligendi autem non!
+                    <br><br>
+                    <strong>a.</strong> Amet lorem ipsum dolor sit <strong>consectetur adipisicing elit</strong>. Commodi doloremque
+                    laborum dolorum tempore ex qui, officia sint rerum nobis voluptates.
+                    <br><br>
+                    <strong>a.</strong> Amet lorem ipsum dolor sit consectetur adipisicing elit. Commodi doloremque
+                    laborum dolorum tempore ex qui, officia sint rerum nobis voluptates.
+                </p>
+
+                <h2 class="mV-15px tt-uppercase">Lista</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque adipisci blanditiis? Officia
+                    animi odio consectetur id consequatur, ad tenetur expedita voluptates?
+                </p>
+                <p class="sublist">
+                    <strong>•</strong> Lorem ipsum dolor sit consectetur adipisicing elit. Commodi doloremque
+                    laborum dolorum tempore ex qui, officia sint rerum nobis voluptates.
+                    <br>
+                    <strong>•</strong> Ipsum dolor sit consectetur adipisicing elit. Commodi doloremque
+                    laborum dolorum tempore ex qui, officia sint rerum nobis voluptates.
+                    <br>
+                    <strong>•</strong> Dolor sit consectetur adipisicing elit. Commodi doloremque
+                    laborum dolorum tempore ex qui, officia sint rerum nobis voluptates.
+                    <br>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Textos Tipo Preguntas - Default -->
+        <div class="contTextInformation mb-0px">
+            <p>
+                <strong>
+                    No olvide consultar las condiciones generales de su seguro, en nuestra página web www.segurosbolivar.co
+                </strong>
+            </p>
+        </div>
+
+
+        <!-- Textos Tipo A -->
+        <div class="contTextInformation contTextInformation--typeA">
+            <p>No olvide consultar las condiciones generales de su seguro, en nuestra página web <strong>www.segurosbolivar.co</strong>
+            </p>
+        </div>
+
+    </section>
+    <!-- #endregion Main section -->
+
+    <!-- #region Pop Up A -->
+    <section class="contModal" id="modalDefault1">
+        <div class="modal">
+            <div class="modal__body">
+                <p>
+                    <strong class="fz-16px">Título del Pop Up</strong>
+                    <br><br>
+                    Este será el cuerpo del Pop Up, lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptate?
+                </p>
+            </div>
+            <div class="contButtons">
+                <button type="button" class="button--secondary" onclick="hideModal(1)">Cancelar</button>
+                <button type="button" class="button--primary" onclick="hideModal(1)">Aceptar</button>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion Pop Up A -->
+
+    <!-- #region Pop Up B -->
+    <section class="contModal" id="modalDefault2">
+        <div class="modal">
+            <div class="modal__body">
+                <img src="../media/illustrations/image-illustratorTest.svg" class="modal__body__illustration" alt="Ilustración de pruebas">
+                <p>
+                    Este será el cuerpo del Pop Up, a su vez sirve como ejemplo para un Pop Up con una ilustración.
+                </p>
+            </div>
+            <div class="contButtons">
+                <button type="button" class="button--primary" onclick="hideModal(2)">Aceptar</button>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion Pop Up B -->
+    
+    <!-- #region Evaluación solicitud -->
+    <section class="contStudyProcess" id="StudyProcess">
+        <h2 class="contStudyProcess__title">Estamos evaluando su solicitud.</h2>
+        <div class="clockAnimation">
+            <span class="clockAnimation__item clockAnimation--light__item"></span>
+            <span class="clockAnimation__item clockAnimation--light__item"></span>
+            <span class="clockAnimation__item clockAnimation--light__item clockAnimation__item--vertical"></span>
+        </div>
+        <p class="contStudyProcess__text">
+            <span>Espere un momento por favor…</span>
+            <span>Recuerde que este proceso de evaluación <strong>NO</strong> tiene cobros por comisión de tramite.</span>
+            <span>¡No use intermediarios!</span>
+        </p>
+    </section>
+    <!-- #endregion Evaluación solicitud -->
+
+    <!-- #region Kangaroo -->
+    <section class="contCanguroMain" id="contCanguro1">
+        <div class="containerCanguro">
+    
+            <div class="containerCanguro__header">
+                <div class="header__title">
+                    <img src="../media/extraIcons/icon-dv-seguroProteccionTarjetas.svg" alt="Título del icono del canguro">
+                    <h2 class="noMrgn">Título del canguro - Seguro</h2>
+                </div>
+            </div>
+
+            <div class="containerCanguro__content">
+                <h2 class="ta-center">Título principal</h2>
+
+                <p class="paragraph mV-15px">
+                    Parrafo introductorio, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ex.
+                </p>
+
+                <div class="listItemsB mb-15px">
+                    <ul>
+                        <li>
+                            <span class="icon-dv-listItemA"></span>
+                            <p>Item list kangaroo - Tooltip</p>
+                            <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--textPosition_B"><span class="icon-dv-tooltipInfo"></span></a>
+                            <div class="tooltip">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quidem officia atque molestiae! Adipisci, eius?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon-dv-listItemA"></span>
+                            <p>
+                                Item list kangaroo - No tooltip, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus fuga quaerat error.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0)" class="hyperlink">Hyperlink - Ver Términos y Condiciones</a>
+
+                <div class="contButtons">
+                    <button type="button" class="button--secondary" onclick="hideKangaroo(1)">Omitir</button>
+                    <button type="button" class="button--primary" onclick="hideKangaroo(1)">Adquirir</button>
+                </div>
+                
+                <div class="contTextInformation contTextInformation--typeA">
+                    <p class="text-description">
+                        Este seguro es expedido por <br>
+                        <strong>Seguros Comerciales Bolívar S.A.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- #endregion Kangaroo -->
+
+    <!-- #region Evaluación solicitud -->
+    <section class="contLoaderShops" id="loaderShops">
+        <div class="contLoaderShops__fixedTitles">
+            <h2>Espere un momento</h2>
+            <h3>Estamos evaluando su solicitud.</h3>
+        </div>
+        <div class="contLoaderShops__steps">
+
+            <svg width="200" height="200">
+                <circle r="95" cx="100" cy="100" class="loader__track"></circle>
+                <circle r="95" cx="100" cy="100" class="loader__progress"></circle>
+            </svg>
+
+            <div class="loader__counter">
+                <p><span>1</span> / 3</p>
+            </div>
+        </div>
+        <div class="loader__text">
+            <p>
+                Creando su cuenta <br> móvil negocio...
+            </p>
+        </div>
+    </section>
+    <!-- #endregion Evaluación solicitud -->
+
+    <!-- #region Atención en línea - recordar poner la clase ".container--Fluid" al ".container -->
+        <a href="javascript:void(0)" class="support">
+            <span class="icon-dv-support"></span>
+            <span>Atención en Línea</span>
+        </a>
+    <!-- #endregion Atención en línea -->
+
+    <script src="../js/main.js"></script>
+    <script src="../js/range.js"></script>
+    <script src="../js/loader-shops.js"></script>
+</body>
+
+</html>

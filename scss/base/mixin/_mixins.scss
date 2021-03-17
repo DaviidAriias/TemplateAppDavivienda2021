@@ -1,0 +1,183 @@
+
+//------------------------------------------- Mixins
+
+//============ Prefix ============
+@mixin prefix($declarations, $prefixes: ()) {
+    @each $property, $value in $declarations {
+      @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+      }
+  
+      // Output standard non-prefixed declaration
+      #{$property}: $value;
+    }
+}
+
+//How to use prefix
+/*
+@include prefix((
+    display: flex,
+    align-items: center,
+    justify-content: flex-start
+), webkit moz ms o);
+*/
+
+//============ End Prefix ============
+
+
+
+//============ Filter overlay ============
+@mixin capa_negra($r,$g,$b,$a){
+    background-color: rgba($r,$g,$b,$a);
+    background-blend-mode: overlay;
+}
+
+//How to use Filtro Background's
+/*
+  Ejemplo pendiente
+*/
+
+//============ End Filter overlay ============
+
+
+
+//============ Keyframes ============
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+      @content;
+  }
+  @-moz-keyframes #{$name} {
+      @content;
+  }
+  @-ms-keyframes #{$name} {
+      @content;
+  }
+  @-o-keyframes #{$name} {
+      @content;
+  }
+  @keyframes #{$name} {
+      @content;
+  }
+}
+
+//How to use Filtro Background's
+/*
+  @include keyframes([animation_name]){
+    0%{
+      properties
+    }
+    100%{
+      properties
+    }
+  }
+
+  Se pueden adjuntar más porcentajes si se requiere, en este caso solo hay dos, inicio y fin.
+*/
+
+//============ End Keyframes ============
+
+
+
+//============ Text Shorten ============
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+//How to use Text Shorten
+/*
+  p{
+      @include text-shorten();
+  }
+*/
+
+//============ End Text Shorten ============
+
+
+
+//============ Darken ============
+@function darken($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+//Hoe to use darken
+/*
+  color: darken([color],[porcentaje])
+  p{
+      color: darken($text-color, 50%);
+  }
+*/
+
+//============ End darken ============
+
+
+
+//============ Lighten ============
+@function lighten($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+//How to use lighten
+/*
+  color: lighten([color],[porcentaje])
+  p{
+      color: lighten($text-color, 50%);
+  }
+*/
+
+//============ End Lighten ============
+
+
+
+//============ Defaut Fonts Properties ============
+
+//How to use defaultFont
+/*
+  p{  
+      @include defaultFont([Se pueden incluir variables o dejar vacio]);
+
+      @include defaultFont($fz: 16px, $fw: bold, $lh: 18px, $ta: center);
+
+      $fz: -> [Property] -> font-size
+      $fw: -> [Property] -> font-weight
+      $lh: -> [Property] -> line-height
+      $ta: -> [Property] -> text-align
+      $c:  -> [Property] -> color
+  }
+*/
+
+@mixin defaultFont($ff: $roboto, $fz: $font-p, $fw: normal, $lh: 'LhInitial', $ta: left, $c: $text-color){
+
+  $FzContent: inspect($fz);
+    @if ends-with($FzContent, 'px') {
+      @if $lh == 'LhInitial'{
+        $lh: $fz + 2;
+      }
+    } @else{
+      @if $lh == "LhInitial"{
+        $lh: initial;
+      }
+    }
+  
+  //Normal properties
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  text-align: $ta;
+  color: $c;
+
+}
+
+//Funcion parar encontrar caracteres de un string
+@function ends-with($string, $find) {
+  @if (str-index($string, $find) == (str-length($string) - str-length($find) + 1)) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+//============ End Defaut Fonts Properties ============

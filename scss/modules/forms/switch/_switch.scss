@@ -1,0 +1,124 @@
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0;
+
+    &:hover{
+        @include prefix((
+            //box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+        ), webkit moz ms o);
+    }
+
+    input {
+        display: none;
+
+        &:checked + .switch__thumb {
+            background-color: $red-primary;
+        }
+        &:focus + .switch__thumb {
+            box-shadow: 0 0 1px $red-primary;
+        }
+        &:checked + .switch__thumb {
+            &::after{
+                @include prefix((
+                    transform: translateX(18px)
+                ), webkit moz ms o);
+            }
+        }
+
+        &:checked + .switch__thumb {
+            &::before{
+                opacity: 9;
+                left: 7px;
+            }
+        }
+        &:checked ~ .thumb_text {
+            &::after{
+                content: "Si";
+                transform: translate(23px, 2px);
+            }
+        }
+    }
+
+    .switch__thumb {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: lighten($text-color, 70%);
+        border-radius: 50px;
+        overflow: hidden;
+        transition-duration: .3s;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            background-color: white;
+            -webkit-transition: .3s;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 2px;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 0;
+            background-color: darken($red-primary, 10%);
+            border-radius: 50px;
+            transition-duration: .3s;
+        }
+    }
+
+    .thumb_text{
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        pointer-events: none;
+
+        &::after{
+            content: "No";
+            display: inline-block;
+            width: auto;
+            height: auto;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+            color: $text-color;
+            font-size: $font-p - 5;
+            font-family: $roboto;
+            font-weight: bold;
+            @include defaultFont($fz: $font-p - 5, $fw: bold, $lh: inherit);
+            
+            transform: translate(4px, 2px);
+            transition-duration: .3s;
+        }
+    }
+}

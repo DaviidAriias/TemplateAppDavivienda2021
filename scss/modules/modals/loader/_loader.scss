@@ -1,0 +1,210 @@
+//-------------------------- Estudio de credito
+.contStudyProcess{
+    @include prefix((
+        display: flex,
+        align-items: center,
+        align-content: center,
+        justify-content: space-evenly,
+        flex-direction: column
+    ), webkit ms moz o);
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 999;
+
+    opacity: 0;
+    pointer-events: none;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+
+    .contStudyProcess__title {
+        display: inline-block;
+        width: 85%;
+
+        @include defaultFont($fz: $font-p + 4, $fw: bold, $ta: center, $c: #fff);
+    }
+    
+    .contStudyProcess__text {
+        display: inline-block;
+        width: 85%;
+        
+        @include defaultFont($fz: $font-p, $fw: bold, $ta: center, $c: #fff);
+
+        span{
+            display: inline-block;
+            width: 100%;
+            margin: 7.5px 0;
+            font-weight: normal;
+        }
+
+        strong{
+            display: inline-block;
+            color: $red-primary;
+        }
+
+    }
+
+}
+
+.clockAnimation{
+    border-radius: 50%;
+    border: 8px solid #fff;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        top: 92px;
+        left: 92px;
+        height: 59px;
+        width: 8px;
+        border-radius: 6px;
+        transform: rotate(180deg);
+
+        @include prefix((
+            transform-origin: 50% 0,
+            animation: hourBar 5s linear infinite
+        ), webkit moz ms o);
+
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        top: 92px;
+        left: 92px;
+        height: 44px;
+        width: 8px;
+        border-radius: 6px;
+
+        @include prefix((
+            transform-origin: 50% 0,
+            animation: minutesBar 96s linear infinite
+        ), webkit moz ms o);
+
+    }
+    &__item {
+        height: 25px;
+        width: 8px;
+        border-radius: 3px;  
+        background-color: white;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        &:before
+        {
+            content: '';
+            height: 25px;
+            width: 8px;
+            border-radius: 3px;  
+            background-color: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 170px;
+        }
+        &--vertical{
+            top: 81px;
+            right: -170px;
+            @include prefix((
+                transform: rotate(90deg),
+            ), webkit moz o ms);
+        }
+    }
+}
+
+@include keyframes(hourBar){
+    0%{
+        -webkit-transform:rotate(180deg);
+    }
+    100%{
+        -webkit-transform:rotate(540deg);
+    }
+}
+
+@include keyframes(minutesBar){
+    0%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(540deg);
+    }
+}
+
+.loaderAnimation{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background: rgb(36, 36, 36);
+    //background: rgba(0,0,0,.3);
+    border-radius: 50%;
+
+    .loader{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #ffffff;
+        @include prefix((
+            background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%),
+            transform: translateZ(0),
+            animation: loaderSppiner 0.8s linear infinite
+        ), webkit moz ms o);
+        position: relative;
+        &::before{
+            content: '';
+            width: 50%;
+            height: 50%;
+            background: #ffffff;
+            border-radius: 100% 0 0 0;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            content: '';
+            width: 75%;
+            height: 75%;
+            background: rgb(36, 36, 36);
+            border-radius: 50%;
+            margin: auto;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+@include keyframes(loaderSppiner){
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+//Evento mostrar Estudio de Crédito
+.contStudyProcess--isShow{
+    opacity: 1;
+    pointer-events: inherit;
+}

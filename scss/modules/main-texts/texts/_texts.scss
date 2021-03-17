@@ -1,0 +1,51 @@
+/* Textos de ayuda helpers 10px - 14px | Generalmemnte van fuera de los boxes o
+en algunos casos dentro de los mismos */
+.contTextInformation{
+    display: inline-block;
+    width: $widthA-100pc;
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+    
+    p{
+        @include defaultFont($ta: center);
+        margin-top: 10px;
+        &:first-of-type{
+            margin-top: 0px;
+        }
+        strong{
+            font-weight: bold;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    &--typeA{
+        p{
+            font-size: $font-p - 2;
+            strong{
+                font-size: $font-p - 2;
+            }
+        }
+    }
+}
+
+
+//Paragraphs
+.paragraph{
+    @include defaultFont();
+}
+
+//Hiperlinks
+.hyperlink{
+    display: inline-block;
+    width: auto;
+    text-decoration: underline;
+    
+    @include defaultFont($fw: bold);
+    &:hover{
+        text-decoration: underline;
+    }
+}

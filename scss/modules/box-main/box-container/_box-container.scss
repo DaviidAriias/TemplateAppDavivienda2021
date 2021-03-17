@@ -1,0 +1,47 @@
+//Container Box - Shadows - Padding - Background
+.contentBox{
+    display: inline-block;
+    width: $widthA-100pc;
+
+    border-radius: 10px;
+    margin: 15px auto 0;
+    padding: 15px;
+
+    position: relative;
+    background-color: $background-contextBox;
+    
+    transition-duration: .2s;
+
+    @include prefix((
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+    ), webkit moz ms);
+
+    &:first-of-type{
+        margin-top: 20px;
+    }
+
+    //Set contentBox init
+    &--typeA{
+        @extend .contentBox;
+        padding: 15px 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    //Set contentBox card in desktop
+    &--typeB{
+        @extend .contentBox;
+        //Breakpoint -> Set contentBox like a card
+    }
+    
+    //Set bgcolor white
+    &--typeC{
+        @extend .contentBox;
+        background-color: #fff;
+    }
+
+    &--result{
+        @extend .contentBox;
+        padding-top: 40px !important;
+    }
+}

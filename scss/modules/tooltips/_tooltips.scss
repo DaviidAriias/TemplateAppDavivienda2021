@@ -1,0 +1,106 @@
+//Tooltips | Buttons and Tooltips
+//Button
+.buttonTooltip {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 15px;
+    transform: translateY(-50%);
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    span{
+        font-size: $font-p + 2 !important;
+    }
+
+    &:hover~.tooltip{
+        opacity: 1 !important;
+    }
+
+    //Posicionamiento texto
+    &--textPosition{
+        position: relative;
+        top: 0px;
+        bottom: 0;
+        right: 8px;
+        left: 0;
+        transform: inherit;
+    }
+    
+    //Posicionamiento button
+    &--textPosition_B{
+        position: relative;
+        top: 2px;
+        bottom: 0;
+        right: 0px;
+        left: 0;
+        transform: inherit;
+    }
+
+    //tamaño
+    &--small{
+        //width: 13px;
+       // height: 13px;
+        span{
+            font-size: $font-p - 1 !important;
+        }
+    }
+
+    //Alter Top
+    &--topConfirmation{
+        top: 30px;
+    }
+}
+
+//Tooltip General
+.tooltip{
+    display: inline-block;
+    width: 80%;
+    max-width: 350px;
+    background-color: $gris-cc;
+    border-radius: 6px;
+    padding: 15px;
+    z-index: 9;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition-duration: .2s;
+    opacity: 0;
+    pointer-events: none;
+
+    &--maxWidth{
+        width: 101%;
+    }
+
+    p {
+        @include defaultFont($fz: $font-p - 2, $lh: 1.3, $c: $negro-00, $fw: 400);
+    }
+    
+    //Pendiente para borrar - hay que testear
+    &--top{
+        transform: translateY(12%);
+    }
+    &--moreTop{
+        transform: translateY(-115%);
+    }
+    &--fullWidth{
+        width: 100%;
+    }
+}

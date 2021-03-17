@@ -1,0 +1,53 @@
+.toggleButton{
+    @include prefix((
+        display: flex,
+        align-items: center,
+        justify-content: space-between
+    ), webkit moz ms);
+
+    width: 100%;
+    position: relative;
+    margin: 2.5px 0;
+
+    background-color: $background-itemBoxes;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition-duration: .2s;
+    
+    @include defaultFont();
+
+    transition-duration: .2s;
+
+    &:hover{
+        background-color: darken($background-itemBoxes, 5%);
+    }
+
+    &--darken{
+        .icon{
+            &::before{
+                color: $disabled-object;
+            }
+        }
+    }
+
+    &--vinculation{
+        margin: 0 0;
+        background-color: $background-body;
+        @include prefix((
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.20)
+        ), webkit moz ms);
+        .result__ConfirButton--icon{
+            &::before{
+                color: $text-color;
+            }
+        }
+    }
+
+    //Icon toggle button
+    span{
+        pointer-events: none;
+        &:last-of-type{
+            font-size: $font-p + 2;
+        }
+    }
+}

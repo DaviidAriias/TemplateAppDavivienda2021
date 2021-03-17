@@ -1,0 +1,81 @@
+/* Main Styles - Generic Reset Styles */
+//Glabal styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+    border: 0;
+    border-width: 0;
+
+    font-family: $roboto;
+    font-size: $font-p;
+    vertical-align: baseline;
+    
+    //Resaltador de selección en el navegador
+    -webkit-tap-highlight-color: transparent;
+    &::selection {
+        background: #d7d7d7;
+    }
+}
+
+
+//Body styles
+body {
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    
+    //Deshabilitar efecto rebote navegadores en el eje x
+    overscroll-behavior-x: none;
+    
+    //Color fondo
+    background-color: $background-body;
+
+    scroll-behavior: smooth;
+}
+
+
+//Forms elements
+button, select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+
+//Init font-weight
+strong, b{
+    @include defaultFont($fw: bold);
+}
+
+
+//Init hyperlink styles
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+
+//Lists
+ol, ul {
+    list-style: none;
+}
+
+
+//Images
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

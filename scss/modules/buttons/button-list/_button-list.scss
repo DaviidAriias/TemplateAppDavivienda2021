@@ -1,0 +1,55 @@
+.buttonsList__container{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+
+    .buttonList{
+        @include prefix((
+            display: flex,
+            align-items: center,
+            justify-content: space-evenly
+        ), webkit moz ms);
+        width: 100%;
+        min-height: 45px;
+        //max-width: 450px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 5px 15px;
+        border-radius: 6px;
+        @include prefix((
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15)
+        ), webkit moz ms);
+
+        &:hover{
+            img{
+                &:last-of-type{
+                    transform: translateX(5px);
+                }
+            }
+        }
+
+        span{
+            display: inline-block;
+            width: 90%;
+            margin-left: 5px;
+            text-align: left;
+
+            font-weight: 500;
+            font-size: $font-p;
+            color: $text-color;
+        }
+
+        img{
+            display: inline-block;
+            transition-duration: .3s;
+           
+            &:first-of-type{
+                width: 35px;
+            }
+            &:last-of-type{
+                width: 8px;
+            }
+        }
+        
+    }
+}
